@@ -1,0 +1,150 @@
+.navbar {
+  width: 100%;
+  height: 78px;
+  padding: 0 7%;
+  background: var(--white);
+  border-bottom: 1px solid #d9e6ef;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.nav-logo img {
+  width: 300px;
+  height: auto;
+  display: block;
+}
+
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.desktop-nav a {
+  font-family: var(--font-display);
+  color: var(--dark);
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+
+.desktop-nav a:hover {
+  color: var(--blue);
+}
+
+.nav-proposal-btn {
+  border: none;
+  background: var(--yellow);
+  color: var(--dark);
+  border-radius: 9px;
+  padding: 16px 34px;
+  font-family: var(--font-display);
+  font-size: 20px;
+  letter-spacing: 0.5px;
+}
+
+.mobile-menu-btn {
+  display: none;
+  width: 46px;
+  height: 46px;
+  border: 2px solid var(--blue);
+  border-radius: 50%;
+  background: white;
+  color: var(--dark);
+  font-size: 22px;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-menu-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.mobile-menu-panel {
+  width: min(390px, 94%);
+  height: 100%;
+  margin-left: auto;
+  background: white;
+  border-left: 2px solid var(--blue);
+  padding: 26px 42px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.mobile-menu-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.mobile-menu-top button {
+  border: none;
+  background: transparent;
+  color: #999;
+  font-size: 28px;
+}
+
+.mobile-menu-panel a {
+  font-family: var(--font-display);
+  color: var(--dark);
+  font-size: 24px;
+  letter-spacing: 0.5px;
+}
+
+.mobile-menu-panel a:hover {
+  color: var(--blue);
+}
+
+.mobile-menu-panel > button {
+  margin-top: 18px;
+  border: none;
+  background: var(--yellow);
+  color: var(--dark);
+  border-radius: 9px;
+  padding: 16px;
+  font-family: var(--font-display);
+  font-size: 22px;
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    height: 58px;
+    padding: 0 12px;
+  }
+
+  .nav-logo img {
+    width: 170px;
+  }
+
+  .desktop-nav,
+  .nav-proposal-btn {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  .mobile-menu-panel {
+    padding: 24px 28px;
+  }
+
+  .mobile-menu-top .nav-logo img {
+    width: 170px;
+  }
+}

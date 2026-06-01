@@ -1,0 +1,89 @@
+.problems-section {
+  width: 100%;
+  padding: 90px 7% 0;
+  background: var(--white);
+  position: relative;
+  z-index: 5;
+}
+
+.problems-section h2 {
+  color: var(--blue);
+  text-align: center;
+  font-size: clamp(42px, 5vw, 78px);
+  line-height: 1;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.problem-grid {
+  margin-top: 76px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.problem-card {
+  min-height: 250px;
+  background: var(--white);
+  border: 2px solid #98c8e9;
+  border-radius: 16px;
+  box-shadow: 10px 10px 0 var(--light-blue);
+  padding: 32px 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  z-index: 6;
+  transition: 0.25s ease;
+}
+
+.problem-card:hover {
+  transform: translateY(-6px);
+}
+
+.problem-icon-img {
+  width: 164px;
+  height: 164px;
+  object-fit: contain;
+  display: block;
+  margin-bottom: 22px;
+}
+
+.problem-card h3 {
+  color: var(--blue);
+  font-size: 31px;
+  line-height: 1;
+}
+
+@media (max-width: 900px) {
+  .problems-section {
+    padding: 70px 12px 0;
+  }
+
+  .problems-section h2 {
+    font-size: 38px;
+  }
+
+  .problem-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    margin-top: 54px;
+  }
+
+  .problem-card {
+    min-height: 210px;
+    padding: 28px 20px;
+  }
+
+  .problem-icon-img {
+  width: 130px;
+  height: 130px;
+  margin-bottom: 18px;
+}
+
+  .problem-card h3 {
+    font-size: 28px;
+  }
+}
